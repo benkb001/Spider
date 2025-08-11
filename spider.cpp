@@ -58,13 +58,6 @@ int main() {
 
     std::unordered_map<std::string, int> visitedSites;
     std::vector<std::string> tokens; 
-    tokens.push_back("gay"); 
-    tokens.push_back("sex"); 
-    tokens.push_back("men"); 
-    tokens.push_back("henry cavill"); 
-    tokens.push_back("hole"); 
-    tokens.push_back("hot"); 
-
     std::string tokenRegexStr = ""; 
 
     for (size_t i = 0; i < tokens.size(); i++) {
@@ -76,7 +69,7 @@ int main() {
 
     std::regex tokenRegex(tokenRegexStr);
     std::regex linkRegex("a href=\"(.*?)\""); 
-    std::string urlInit = "https://www.awwwards.com/";
+    std::string urlInit;
     int limit = 100; 
     
     traverseSite(urlInit, readBuffer, visitedSites, res, curl, tokenRegex, linkRegex, limit); 
