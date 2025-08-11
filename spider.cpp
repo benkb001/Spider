@@ -57,6 +57,7 @@ int main() {
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer); 
 
     std::unordered_map<std::string, int> visitedSites;
+    //TODO: switch to getting user input from tokens.txt
     std::vector<std::string> tokens; 
     std::string tokenRegexStr = ""; 
 
@@ -69,6 +70,7 @@ int main() {
 
     std::regex tokenRegex(tokenRegexStr);
     std::regex linkRegex("a href=\"(.*?)\""); 
+    //TODO: switch to getting user input from cmd line
     std::string urlInit;
     int limit = 100; 
     
